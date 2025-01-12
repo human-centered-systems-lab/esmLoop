@@ -7,6 +7,8 @@ In the future, cognitive activity will be tracked in the same way how physical a
 esmLoop is available under the MIT license and was developed:
 *by Moritz Langner, Pascal Roller, Peyman Toreini, & Alexander Maedche*
 
+Important note: You have to add the Tobii Pro Research Package and the Tobii Interaction Library to the project.
+
 ## Publications
 
 ### Please Cite As
