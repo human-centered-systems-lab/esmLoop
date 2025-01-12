@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="ESMLoop.Windows.Question1Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ESMLoop"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment ="Center" Orientation="Vertical" Width="500">
+                <StackPanel Width="460" Background="#FF3A3A3A">
+                    <local:LikertControl
+                        x:Name="Flow0"
+                        Question="1.Ich fühle mich optimal beansprucht."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow1"
+                        Question="2. Meine Gedanken bzw. Aktivitäten laufen flüssig und glatt."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow2"
+                        Question="3. Ich merke gar nicht, wie die Zeit vergeht."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow3"
+                        Question="4.Ich habe keine Mühe, mich zu konzentrieren."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow4"
+                        Question="5. Mein Kopf ist völlig klar."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow5"
+                        Question="6. Ich bin ganz vertieft in das, was ich gerade mache."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow6"
+                        Question="7. Die richtigen Gedanken kommen wie von selbst."
+                        Margin="0,10,0,10"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment ="Center" Orientation="Vertical" Width="500">
+                <StackPanel Width="460" Background="#FF3A3A3A" Height="420">
+                    <local:LikertControl
+                        x:Name="Flow7"
+                        Question="8. Ich weiß bei jedem Schritt, was ich zu tun habe."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow8"
+                        Question="9. Ich habe das Gefühl, den Ablauf unter Kontrolle zu haben."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow9"
+                        Question="10. Ich bin völlig selbstvergessen."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow10"
+                        Question="11. Es steht etwas für mich Wichtiges auf dem Spiel."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow11"
+                        Question="12. Ich darf jetzt keine Fehler machen."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                    <local:LikertControl
+                        x:Name="Flow12"
+                        Question="13. Ich mache mir Sorgen über einen Misserfolg."
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    </local:LikertControl>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

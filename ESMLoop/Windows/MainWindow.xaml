@@ -1,0 +1,172 @@
+﻿<Window x:Class="ESMLoop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ESMLoop"
+        mc:Ignorable="d"
+        Title="esmLoop" Height="430" Width="700"
+        ResizeMode="NoResize"
+        Icon="/Resources/Icon.ico"
+        WindowStartupLocation="CenterScreen"
+        Closed="MainWindow_Closed">
+    <Grid>
+        
+        <StackPanel Background="#FF212121">
+            <TextBlock
+                Width="480"
+                Margin="20,10,0,20"
+                HorizontalAlignment="Left"
+                Text="esmLoop"
+                TextAlignment="Left"
+                FontSize="40"
+                FontWeight="SemiBold" Foreground="White">
+            </TextBlock>
+            <StackPanel Margin="20,0,20,0" Background="#FF2D2D2D">
+                <TextBlock
+                    Width="480"
+                    Margin="20,10,0,0"
+                    HorizontalAlignment="Left"
+                    Text="1. Prepare Eye Tracker"
+                    TextAlignment="Left"
+                    FontSize="18"
+                    FontWeight="UltraLight" Foreground="White">
+                </TextBlock>
+                <StackPanel HorizontalAlignment ="Center" Margin="0,10,0,15" Orientation="Horizontal">
+                    <StackPanel>
+                        <Button 
+                            x:Name="ButtonSetupDisplay"                                    
+                            Content="Set up Display"
+                            Height="40"   
+                            Width="300"
+                            Margin="10,0,10,0"
+                            Click="ButtonSetupDisplay_Click"                                                                          
+                            FontSize="12"                               
+                            FontWeight="Regular" BorderBrush="{x:Null}">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel>
+                        <Button 
+                            x:Name="ButtonCalibrateEyetracker"                                    
+                            Content="Calibrate Eye Tracker" 
+                            Margin="10,0,10,0"
+                            Height="40"
+                            Width="300"
+                            Click="ButtonCalibrateEyetracker_Click"                                                                         
+                            FontSize="12"                               
+                            FontWeight="Regular" BorderBrush="{x:Null}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="20,20,20,0" Background="#FF2D2D2D">
+                <TextBlock
+                    Width="480"
+                    Margin="20,10,0,0"
+                    HorizontalAlignment="Left"
+                    Text="2. Storage Location"
+                    TextAlignment="Left"
+                    FontSize="18"
+                    FontWeight="UltraLight" Foreground="White">
+
+                </TextBlock>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,10,0,10" Height="60">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin" Value="0,0,30,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Button 
+                        x:Name="ButtonSetSaveLocation"                                    
+                        Content="Set Storage Localtion"                                                       
+                        Height="40"     
+                        Width="150"
+                        HorizontalAlignment="Left"
+                        Click="ButtonSetSaveLocation_Click"                                                                         
+                        FontSize="12"                               
+                        FontWeight="Regular" BorderBrush="{x:Null}">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Grid Width="440" Height="60">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock
+                                Width="370" 
+                                Height="30"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="Storage Location"
+                                FontSize="14"
+                                FontWeight="DemiBold" Foreground="White">
+                            </TextBlock>
+                            <TextBlock
+                                x:Name="LabelSaveLocation"
+                                Width="370" 
+                                Height="30"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Text="{Binding Source={StaticResource Settings}, Path=Default.Path}"
+                                FontSize="12" Foreground="White">
+                            </TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            
+            </StackPanel>
+            <!--
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Height="30">
+                <Grid Margin="0,0,10,0" Height="30">
+                    <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold">
+                    Session Dauer:
+                    </TextBlock>
+                </Grid>
+                <TextBox
+                    x:Name="TextBoxSessionTime"
+                    PreviewTextInput="TextBoxSessionTime_PreviewTextInput"
+                    Height="30"
+                    Width="100"
+                    FontSize="18"
+                    VerticalAlignment="Center">
+                </TextBox>
+                <Grid Margin="10,0,0,0" Height="30">
+                    <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold">
+                    Minuten
+                    </TextBlock>
+                </Grid>
+            </StackPanel>
+            -->
+            <StackPanel HorizontalAlignment="Right" Margin="20,20,20,20">
+                <Button 
+                    x:Name="ButtonStartRecording"                                    
+                    Content="Start Experience Sampling"                                                      
+                    Height="40"    
+                    Width="250"
+                    Click="ButtonStartRecording_Click"                                                                          
+                    FontSize="14"                               
+                    FontWeight="DemiBold" Background="#FF2F75D4" Foreground="White" BorderBrush="{x:Null}">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

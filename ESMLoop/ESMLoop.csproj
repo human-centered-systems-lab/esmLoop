@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+	<PlatformTarget>AnyCPU</PlatformTarget>
+	<Platforms>AnyCPU</Platforms>
+	<StartupObject>ESMLoop.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tracking\DebugLog.cs" />
+    <Compile Remove="UserControl1.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Windows\KitIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="UserControl1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\KitIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\KitIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Sentry" Version="3.21.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="tobii_interaction_lib_cs">
+      <HintPath>..\..\..\Tobii Interaction Lib\interaction_lib_sdk_windows_x64_dynamic_1.0.2.1\lib\x64\tobii_interaction_lib_cs.dll</HintPath>
+    </Reference>
+    <Reference Include="tobii_interaction_lib_wpf">
+      <HintPath>..\..\..\Tobii Interaction Lib\interaction_lib_sdk_windows_x64_dynamic_1.0.2.1\lib\x64\tobii_interaction_lib_wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Windows\KitIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Windows\Questions03.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+
+
+
+</Project>
